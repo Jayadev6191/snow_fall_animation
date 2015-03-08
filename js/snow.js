@@ -1,13 +1,17 @@
 (function(){
 	
 	function init(){
+			var vid = document.getElementById("audio");
+			vid.autoplay = true;
+			// vid.load();
+			
 			var canvas=document.getElementsByTagName("canvas")[0];
 			canvas.width=screen.width;
 			canvas.height=screen.height;
 			var ctx = canvas.getContext("2d");
 
 			var pic=new Image();
-			pic.src="images/christmas.png";	
+			pic.src="images/snow.png";	
 			pic.addEventListener("load",function(){
 				ctx.drawImage(pic,0,0,canvas.width,canvas.height);
 			});
