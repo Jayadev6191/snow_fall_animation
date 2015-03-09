@@ -1,9 +1,12 @@
-html,body{
-			padding: 0px;
-			margin: 0px;
-			overflow: none;
-		}
-		canvas{
-			padding: 0px;
-			margin: 0px;	
-		}
+body{
+		margin: 0px;
+		width:  100%;
+		height: auto;
+	}
+
+canvas{
+		padding: 0px;
+		margin: 0px;	
+	  }
+
+/**/
