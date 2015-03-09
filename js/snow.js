@@ -47,10 +47,21 @@
 						flakes[i].y+=1.5;
 					}
 
-					if(flakes[i].y>300 || flakes[i].y<800){
-						flakes[i].x+=2.5;
-						flakes[i].y+=3.5;
+					if(flakes[i].y>300 || flakes[i].y<550){
+						flakes[i].x+=3.5;
+						flakes[i].y+=2.5;
 					}
+
+					if(flakes[i].y>550 || flakes[i].y<650){
+						flakes[i].x+=2.5;
+						flakes[i].y+=1.5;
+					}
+
+					if(flakes[i].y>650 || flakes[i].y<800){
+						flakes[i].x-=2.0;
+						flakes[i].y+=1.5;
+					}
+
 					else{
 						// remove the flake once it reaches the bottom of the canvas
 						flakes.splice(i,1);
@@ -66,15 +77,9 @@
 				snow();
 			}
 
-			function box(){
-				ctx.rect(Math.floor((Math.random()*canvas.width)+1),20,150,100);
-				ctx.strokeStyle="red";
-				ctx.stroke();
-				move()
-			}
 
-			// Call animate function continuously for every 30 milliseconds
-			var animateInterval=setInterval(animate,10);
+			// Call animate function continuously for every 20 milliseconds
+			var animateInterval=setInterval(animate,20);
 			// var boxInterval=setInterval(box,35);
 	}
 	window.addEventListener('load',init,false);
